@@ -67,10 +67,10 @@ ul{
 
 .show-content{
     z-index: 3;
-    height: 78vh;
+    height: 80vh;
     background: rgba(0, 0, 0, 0.7);
     margin: 10% auto;
-    padding: 4rem 0.4rem;
+    padding: 2rem 0.4rem;
 }
 
 .login{
