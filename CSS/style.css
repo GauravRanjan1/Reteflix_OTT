@@ -1,0 +1,486 @@
+ /* CSS varaible */
+:root{
+    --primary-color: #e50914;
+    --dark: #141414;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #000;
+    color: #888;
+    direction: ltr;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul{
+    list-style: none;
+}
+
+h1,h2,h3,h4{
+    color: #fff;
+}
+
+p{
+    margin: 0.5rem 0;
+}
+
+img{
+    width: 100%;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background: url('../img/bg1.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    /* For pseudo class as its position is absolute */
+    position: relative;
+}
+
+.wrapper::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.64);
+    z-index: 1;
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+.wrapper-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    height: 90px;
+    z-index: 3;
+}
+
+.wrapper img{
+    width: 200px;
+}
+
+.wrapper-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    text-align: center;
+    padding: 0 16rem;
+    z-index: 3;
+}
+
+.wrapper-content h1{
+    font-size: 3.7rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.wrapper-content p{
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+
+/* Tabs Section*/
+.tabs{
+    background: var(--dark);
+    border-bottom: 3px solid #888;
+}
+
+.tabs .container > div:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.underlined{
+    border-bottom: 4px solid var(--primary-color);
+    padding: 0.6rem 1.5rem;
+}
+
+/* Tab Content Section*/
+.tab-content,
+.child-section{
+    border-bottom: 3px solid #888;
+}
+
+.tab-content .container, 
+.child-section .container{
+    height: 58vh;
+    max-width: 100%;
+    overflow: visible;
+    margin: 1.2rem 8rem;
+}
+
+.container .content-item .content-1-outer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-item .content-1-outer .content-1-inner{
+    width: 55%;
+    margin: 0 20px;
+}
+
+.content-1-inner h1,
+.child-inner h1{
+    font-size: 3.3rem;
+    font-weight: 600;
+}
+
+.content-1-inner p,
+.child-inner p{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.container .content-item img{
+    width: 44%;
+}
+
+#tab-1-content, 
+#tab-2-content{
+    display: none;
+}
+
+.show{
+    display: block  !important;
+}
+
+/* & Children Section */
+.child-section .container img{
+    width: 48%;
+}
+
+.text-center{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.text-center p{
+    font-size: 1.2rem;
+    padding-bottom: 0.4rem;
+}
+
+/* Table */
+.table{
+    width: 100%;
+    padding-top: 1.01rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table thead th{
+    text-transform: uppercase;
+    padding: 0.6rem;
+    color: #fff;
+}
+
+.table tbody tr td{
+    text-align: center;
+    padding: 0.6rem 1.2rem;
+    color: #999;
+}
+
+.table tbody tr td:first-child{
+    text-align: left;
+}
+
+.table tbody tr:nth-child(odd){
+    background: #222;
+}
+
+/* Footer */
+.footer{
+    max-width: 80%;
+    margin: 1.2rem auto;
+}
+
+.footer-cols{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-cols li{
+    padding: 0.9rem;
+}
+
+.footer-cols li a{
+    color: #888;
+}
+
+.footer-cols li a:hover{
+    color: #999;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn{
+    background: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 1px 0 rgba(0,0,0, 0.54);
+}
+
+.btn-round{
+    border-radius: 20px;
+}
+
+.btn:hover{
+    opacity: 0.7;
+}
+
+.btn-xl{
+    font-size: 1.68rem;
+    padding: 0.5rem 1.4rem;
+    text-transform: uppercase;
+}
+
+/* Container */
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 0.9rem;
+    max-width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+
+/* Media Queries */
+@media (max-width: 960px){
+    .wrapper{
+        height: 90vh;
+    }
+
+    .wrapper img{
+        width: 100px;
+    }
+    
+    .wrapper-content{
+        height: 70vh;
+        padding: 0 8rem;
+    }
+
+    .wrapper-content h1{
+        font-size: 2rem;
+        line-height: 1;
+    }
+    
+    .wrapper-content p{
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    .hide-sm{
+        display: none;
+    }
+
+    .tab-content .container{
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 1.2rem auto;
+    }
+
+    .container .content-item .content-1-outer {
+        flex-direction: column;
+    }
+
+    .content-item .content-1-outer .content-1-inner{
+        width: 100%;
+        margin: 0 20px;
+    }
+
+    .tab-content .container, 
+    .child-section .container{
+        height: 86vh;
+        margin: 2.5rem 1rem;
+    }
+
+    .content-1-inner h1,
+    .child-inner h1{
+        font-size: 3rem;
+    }
+
+    .content-1-inner p,
+    .child-inner p{
+        font-size: 1.6rem;
+    }
+
+    .container .content-item img{
+        width: 80%;
+        margin-top: 5rem;
+    }
+
+    .content-item .content-1-inner {
+        width: 47%;
+        margin: 0 0px;
+    }
+
+    .child-section .container img{
+        width: 60%;
+    }
+
+    .child-section .container{
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+
+    .wrapper::after{
+        box-shadow: inset 80px 60px 250px #000000, inset -80px -60px 250px #000000;
+    }
+
+    .btn-xl{
+        font-size: 1.2rem;
+        padding: 0.3rem 1rem;
+    }
+
+    .btn{
+        padding: 0.4rem 1rem;
+    }
+
+    .underlined{
+        padding: 0.5rem 1.9rem;
+    }
+}
+
+@media(min-width: 340px) and (max-width: 564px){
+    .wrapper{
+        height: 89vh;
+    }
+
+    .wrapper-top {
+        padding: 0 1rem;
+    }
+
+    .wrapper img{
+        width: 80px;
+    }
+    
+    .wrapper-content{
+        height: 70vh;
+        padding: 0 3rem;
+    }
+
+    .wrapper-content h1{
+        font-size: 1.362rem;
+    }
+    
+    .wrapper-content p{
+        font-size: 0.8rem;
+    }
+
+    .tabs .container{
+        max-width: 90%;
+    }
+
+    .container .content-item {
+        flex-direction: column-reverse;
+    }
+
+    .content-1-inner h1,
+    .child-inner h1{
+        font-size: 2.7rem;
+    }
+
+    .content-1-inner p,
+    .child-inner p{
+        font-size: 1.4rem;
+    }
+
+    .tab-content .container, 
+    .child-section .container{
+        margin: 2.5rem 1rem;
+    }
+
+    .container .content-item img{
+        width: 110%;
+        margin-top: 4rem;
+    }
+
+    .tab-content .container, .child-section .container {
+        margin: 1.5rem 1rem;
+    }
+    
+    .tab-content .container, .child-section .container {
+        height: 86vh;
+        margin: 1.5rem 2rem;
+    }
+
+    .text-center p {
+        font-size: 0.8rem;
+        padding-bottom: 0;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .table thead th {
+        padding: 0.4rem;
+    }
+
+    .table tbody tr td {
+        padding: 8px 0;
+        font-size: 0.6rem;
+    }
+
+    .child-section .container img {
+        width: 100%;
+    }
+
+    .footer-cols{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+	    grid-gap: 2rem;
+    }
+
+    .wrapper::after{
+        box-shadow: inset 8px 3px 250px #000000, inset -8px -3px 250px #000000;
+    }
+
+    .btn-xl{
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.6rem;
+        border: none;
+    }
+
+    .underlined{
+        padding: 0.5rem 1rem;
+    }
+}
+
